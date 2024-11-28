@@ -1,0 +1,48 @@
+.contactChildrenImg {
+    visibility: hidden;
+    opacity: 0;
+    margin-left:0   ; 
+    transition: opacity 1s ease,margin 1s ease, visibility 0s 0.4s; 
+}
+
+.contact:hover .contactChildrenImg {
+    visibility: visible;
+    opacity: 1; 
+    margin-left:16px;
+    transition: opacity 1s ease,margin 1s ease,  visibility 0s;
+}
+
+.leftDetails{
+    margin-left:24px;
+    transition: margin 1s ease;
+    margin-top:2px;
+}
+
+.leftDetails:hover{
+    margin-left:0;  
+    transition: margin 1s ease;
+
+}
+
+
+.contact:hover {
+    color: white;
+    width: 177px;justify-content: center;
+    padding: 14px 0 0 0;
+    background: #3C096C;
+    height: 52px;
+    opacity: 1;
+    transform: scaleX(1); 
+    transform-origin: right; 
+    transition: opacity 1s ease,padding 1s ease, width 1s ease, height 1s ease, background-color 1s ease, color 1s ease;
+}
+.contact {
+    color: black; 
+    justify-content: center;
+    width: 139px;
+    padding: 8px 0 0 0;
+    background: white;  
+    transform-origin: left; 
+    height: 42px; 
+    transition: opacity 1s ease,padding 1s ease, width 1s ease, height 1s ease, background-color 1s ease, color 1s ease;
+}

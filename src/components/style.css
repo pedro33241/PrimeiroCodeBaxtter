@@ -1,0 +1,54 @@
+.custom-gradient {
+    background: radial-gradient(circle, #010202 20%, #5A189A00 50%, #010202 30%);
+  }
+  
+  @media (max-width: 768px) {
+    .top-[30vh] {
+        top: 30vh; 
+    }
+
+ 
+    h1 {
+        font-size: 40px; 
+        line-height: 1.3;
+    }
+
+    .max-w-[1408px] {
+        max-width: 100%; 
+    }
+}
+.partner-scroll-container {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+  }
+  
+  .partner-scroll-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    background: linear-gradient(to right, #010202, rgba(0, 0, 0, 0));
+    z-index: 10; 
+  }
+  
+  .partner-scroll-container::before {
+    left: 0;
+  }
+
+  .partner-scroll-content {
+    display: flex;
+    gap: 23px; 
+    animation: scroll-right 6s linear infinite;
+  }
+  
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(0); 
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
