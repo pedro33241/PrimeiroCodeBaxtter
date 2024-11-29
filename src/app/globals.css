@@ -17,7 +17,25 @@
 body {
   margin:0;
   padding:0;
+  
   color: var(--foreground);
   background: var(--background);
   font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+@media(min-width:2500px){
+  .limit{ 
+    margin:auto;
+    width:1800px;
+  }
+}
+
+.backgroundImage{
+  background-image: url('../../public/image.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  z-index: 100;
+  border-radius: 12px;
 }

@@ -1,44 +1,45 @@
 import Image from "next/image";
 import Link from "next/link";
-import"./style.css"
-export function NavBar(){
-    return(
+import "./style.css"
+import { AccountMenu } from "../sideBar/sideBar";
+export function NavBar() {
+    return (
         <>
             <div
-                className="opacity-0 z-0 w-full h-[85px] px-[97px] flex flex-row justify-between"
-                style={{ 
-                    background:"transparent",
-                    border: '1px solid rgba(1, 2, 2, 0.16)', 
+                className=" shadow-lg  shadow-[#0a070e81] absolute top-0 z-50 w-full sx:px-[33px] mf:px-[97px]  pb-[21px] flex flex-wrap justify-between"
+                style={{
+                    background: "transparent",
                     backdropFilter: 'blur(100px)',
-                    boxShadow: '0 5px 8px rgba(0, 0, 0, 2)', 
+                    border: '1px solid',
+                    borderImageSource: 'linear-gradient(90deg, rgba(1, 2, 2, 0.16) 0%, rgba(1, 2, 2, 0.16) 100%)'
+
                 }}
             >
 
-        <aside className="mt-[24px]">
-            <Image
-             src="/logo.svg"
-             alt="Flint logo"
-             width={142.44}
-             height={41}
-             priority
-            />
-        </aside>
-                <div className="relative z-50">
-                    <nav className="relative mt-[33px] w-[562px] z-50">
-                        <ul className="flex flex-row gap-10 text-[#E0E0E0] font-normal text-sm">
-                            <li><Link href="">Serviços</Link></li>
-                            <li><Link href="">Case</Link></li>
-                            <li><Link href="">Sobre Nós</Link></li>
-                            <li><Link href="">Blog</Link></li>
-                            <li><Link href="">Depoimentos</Link></li>
-                            <li><Link href="">Contactos</Link></li>
-                        </ul>
-                    </nav>
-                </div>
+                <aside className="mt-[24px]">
+                    <Image
+                        src="/icon.svg"
+                        alt="Flint logo"
+                        width={142.44}
+                        height={41}
+                        priority
+                    />
+                </aside>
 
-        
-                <div className="w-[140px] relative z-50">
-                    <aside className="relative contact z-50 mt-[21px] flex flex-row rounded-3xl cursor-pointer">
+                <nav className="sx:hidden mf:block mt-[33px] w-[562px]">
+                    <ul className="flex flex-row gap-10 text-[#E0E0E0] font-normal text-sm">
+                        <li><Link href="">Serviços</Link></li>
+                        <li><Link href="">Case</Link></li>
+                        <li><Link href="">Sobre Nós</Link></li>
+                        <li><Link href="">Blog</Link></li>
+                        <li><Link href="">Depoimentos</Link></li>
+                        <li><Link href="">Contactos</Link></li>
+                    </ul>
+                </nav>
+
+
+                <div className="w-[140px] sx:hidden mf:block ">
+                    <aside className=" contact mt-[21px] flex flex-row rounded-3xl cursor-pointer">
                         <span className="text-sm font-[600] leftDetails">Fale&nbsp;conosco</span>
                         <Image
                             src="/arrow.svg"
@@ -49,10 +50,14 @@ export function NavBar(){
                             className="contactChildrenImg -mt-2.5"
                         />
                     </aside>
-              </div>
+                </div>
 
+                <div className="absolute right-5 sx:block mf:hidden mt-4">
 
-        </div>
+                    <AccountMenu />
+                </div>
+            </div>
+
         </>
 
     )
