@@ -59,7 +59,7 @@ export default function Home() {
                 className="sx:w-full md:w-[490px] text-white px-5 py-6  flex flex-col gap-6 rounded-xl "
                 style={{
                   background: 'linear-gradient(90deg, rgba(139, 53, 232, 0.25) 0%, rgba(60, 9, 108, 0.25) 100%)',
-                  border: '3px dashed #8B35E8'
+                  border: '2.5px dashed #8B35E8'
                 }}>
                 <Image
 
@@ -130,9 +130,18 @@ export default function Home() {
             </aside>
           
           </div>
-          
+        
             {tab == 1 && (
-            <div className="backgroundImage relative mt-12 mf:mx-16 sx:mx-5 z-50 ">
+            <div className=" relative mt-12 mf:mx-16 sx:mx-5 z-50 " >
+              <Image
+
+                src="/image.png"
+                alt="Flint quadrados"
+                width={1230}
+                height={100}
+                className="w-full h-full relative  top-0"
+                priority
+              />
               <div className="bg-[rgba(0,0,0,.1)] flex flex-col gap-4 absolute top-0 left-0 w-full h-full py-36 px-8">
                 <h4 className="text-white text-base">Tecnologia</h4>
                 <h2 className=" md:w-[783px] sx:w-full text-white font-semibold md:text-[36px] sx:text-[24px] mf:text-[58px]">Desenvolvimento e Inovação</h2>
@@ -153,7 +162,52 @@ export default function Home() {
         </article>
 
 
+         
 
+        <div className="relative mx-auto  mb-36 items-center mt-36 pb-4 border border-[#380C69] w-[1470px] h-[753px] rounded-[45px]">
+          <Image
+
+            src="/gradient.png"
+            alt="Flint "
+            width={1230}
+            height={300}
+            className="absolute  top-0"
+            priority
+          />
+          <Image
+
+            src="/gradient2.png"
+            alt="Flint "
+            width={1230}
+            height={300}
+            className="absolute  bottom-0 left-0"
+            priority
+          />
+
+          <div className="bg-[rgba(0,0,0,.1)] flex flex-col gap-2  relative top-0 left-0 w-full h-full pt-44 px-8">
+            <h4 className="text-white text-base">Tecnologia</h4>
+            <h2 className=" md:w-[783px] sx:w-full text-white font-semibold md:text-[36px] sx:text-[24px] mf:text-[58px]">Flint IT é a sua escolha perfeita em termos de:</h2>
+           
+            <ul className="flex flex-col gap-4 md:text-lg sx:text-xs font-semibold">
+              <li className="flex gap-3"> <Image src="/save.svg" alt="Flint" width={24} height={24} priority /> Soluções Personalizadas para Cada Negócio. </li>
+              <li className="flex gap-3"> <Image src="/save.svg" alt="Flint" width={24} height={24} priority />Especialistas em Tecnologias de Ponta.</li>
+              <li className="flex gap-3"> <Image src="/save.svg" alt="Flint" width={24} height={24} priority />Resultados Mensuráveis e Impactantes.</li>
+              <li className="flex gap-3"> <Image src="/save.svg" alt="Flint" width={24} height={24} priority /> Suporte Técnico e Acompanhamento Constante. </li>
+              <li className="flex gap-3"> <Image src="/save.svg" alt="Flint" width={24} height={24} priority /> Equipe Multidisciplinar e Apaixonada. </li>
+            </ul>
+
+            <button className="flex mt-3  sx:w-full md:w-[299px] bg-white flex-row gap-3 text-[#3C096C] rounded-lg py-4 px-6 font-semibold md:text-lg sx:text-xs "> Descubra&nbsp;mais&nbsp;sobre&nbsp;nós <Image src="/send.svg" alt="Flint" width={24} height={24} priority /></button>
+       
+            
+            <div className="absolute   bottom-0  right-0">
+              <div
+                className="border-[#6D1BBC] -mt-5 rotated   md:w-[200px]  text-white border rounded-[15px] py-4 px-6 font-semibold md:text-2xl sx:text-xl "
+                style={{ transform: 'rotate(-60deg)'}}>Performance</div>
+             
+            </div>
+          </div>
+        
+        </div>
 
       </section> 
     </>
