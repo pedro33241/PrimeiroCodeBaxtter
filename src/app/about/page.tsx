@@ -129,7 +129,7 @@ priority
 </svg></Link>
 
       </div>
-       <div className="flex flex-wrap gap-4">
+       <div className="flex mf:flex-row sx:flex-col gap-4">
 
      <div className="flex w-full  flex-col gap-5">
         <div className="w-full rounded-[12px] h-[232px] relative p-3" style={{ background: 'linear-gradient(113.05deg, #7B2CBF 29.22%, #6A2A9F 74.81%)', border: '1px solid', borderImageSource: 'linear-gradient(107.6deg, rgba(77, 77, 85, 0) 0%, #6A2A9F 100%)' }}>
