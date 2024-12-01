@@ -6,7 +6,7 @@ import Image from "next/image";
 import "../globals.css";
 import React from 'react';
 
-const blogPage = () => {
+export function  BlogPage  () {
   return (
     <>
 <NavBar />
@@ -45,5 +45,4 @@ const blogPage = () => {
   </>
   );
 }
-
-export default blogPage;
+ 

@@ -6,7 +6,7 @@ import "../globals.css";
 
 import React from 'react';
 
-const casePage = () => {
+export function  CasePage  ()  {
    
   return (
     
@@ -47,5 +47,3 @@ const casePage = () => {
   </>
   );
 }
-
-export default casePage;
