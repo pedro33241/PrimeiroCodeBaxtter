@@ -12,7 +12,7 @@ const blogPage = () => {
 <NavBar />
     <div className="limit">
 
-<div className=" relative px-5 mt-40 mb-32 flex flex-col justify-center items-center mx-auto text-center h-screen">
+<div className=" relative px-5  mb-32 flex flex-col justify-center items-center mx-auto text-center h-screen">
  
 <Image
     src="/BackgroundGradiente.svg"
