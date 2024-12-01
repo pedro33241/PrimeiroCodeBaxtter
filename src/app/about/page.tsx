@@ -5,12 +5,14 @@ import Image from "next/image";
 import "../globals.css"; 
 import Link from "next/link";
 import { aboutCompany, infoCompany } from "../../constant/variable";
-import { useState } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
  
-const useAboutPage = () => {
-  const [tab, setTab] = useState(1);
+import { useState } from "react";
+
+
+export default function About() {
+const [tab, setTab] = useState(1);
 
   return (
     <>
@@ -219,5 +221,3 @@ priority
  </>
   );
 }
-
-export default useAboutPage;
