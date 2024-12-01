@@ -1,10 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import "./style.css"
+import "./style.css" ;
+
+
 import { AccountMenu } from "../sideBar/sideBar";
+
+ 
 export function NavBar() {
+
     return (
         <>
+           <div className="relative "> 
             <div
                 className=" shadow-lg  shadow-[#0a070e81] absolute top-0 z-50 w-full sx:px-[33px] mf:px-[97px]  pb-[21px] flex flex-wrap justify-between"
                 style={{
@@ -16,7 +22,7 @@ export function NavBar() {
                 }}
             >
 
-                <aside className="mt-[24px]">
+                <Link href="/" className="mt-[24px]">
                     <Image
                         src="/icon.svg"
                         alt="Flint logo"
@@ -24,23 +30,23 @@ export function NavBar() {
                         height={41}
                         priority
                     />
-                </aside>
+                </Link>
 
                 <nav className="sx:hidden mf:block mt-[33px] w-[562px]">
                     <ul className="flex flex-row gap-10 text-[#E0E0E0] font-normal text-sm">
-                        <li><Link href="">Serviços</Link></li>
-                        <li><Link href="">Case</Link></li>
-                        <li><Link href="">Sobre Nós</Link></li>
-                        <li><Link href="">Blog</Link></li>
-                        <li><Link href="">Depoimentos</Link></li>
-                        <li><Link href="">Contactos</Link></li>
+                        <li><Link href="/" prefetch={true} >Serviços</Link></li>
+                        <li><Link href="/case" prefetch={true} >Case</Link></li>
+                        <li><Link href="/about" prefetch={true} >Sobre Nós</Link></li>
+                        <li><Link href="/blog" prefetch={true} >Blog</Link></li>
+                        <li><Link href="/#testimony" prefetch={true} >Depoimentos</Link></li>
+                        <li><Link href="#contact" prefetch={true} >Contactos</Link></li>
                     </ul>
                 </nav>
 
 
-                <div className="w-[140px] sx:hidden mf:block ">
+                <Link  href="#contact" className="w-[140px] sx:hidden mf:block ">
                     <aside className=" contact mt-[21px] flex flex-row rounded-3xl cursor-pointer">
-                        <span className="text-sm font-[600] leftDetails">Fale&nbsp;conosco</span>
+                        <span className="text-sm font-[600] leftDetails" style={{ lineHeight: '22px'}}>Fale&nbsp;conosco</span>
                         <Image
                             src="/arrow.svg"
                             alt="Flint seta"
@@ -50,14 +56,14 @@ export function NavBar() {
                             className="contactChildrenImg -mt-2.5"
                         />
                     </aside>
-                </div>
+                </Link>
 
                 <div className="absolute right-5 sx:block mf:hidden mt-4">
 
                     <AccountMenu />
                 </div>
             </div>
-
+</div>
         </>
 
     )

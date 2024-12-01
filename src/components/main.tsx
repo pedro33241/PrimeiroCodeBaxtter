@@ -4,6 +4,7 @@ import "./style.css"
 
 import "./layout/navBar/style.css"
 import { partnerData } from "@/constant/variable";
+import Link from "next/link";
 export function MainIndex() {
 
 
@@ -41,27 +42,27 @@ export function MainIndex() {
             <div className="mx-auto sx:mt-44 mf:mt-80 justify-center   flex items-center text-center top-[20vh] w-full px-4">
               <div className="max-w-[1408px] w-full mx-auto">
                 <aside className="mb-7 flex flex-wrap text-white md:text-xs sx:text-[11px] mf:text-base font-medium gap-[25px] justify-center">
-                  <label className="border border-white p-2.5 rounded-[35px]" style={{ lineHeight: '22px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
+                  <label className="relative z-10 border border-white p-2.5 rounded-[35px]" style={{ lineHeight: '22px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                     Tecnologia
                   </label>
-                  <label className="border border-white p-2.5 rounded-[35px]" style={{ lineHeight: '22px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
+                  <label className="relative z-10 border border-white p-2.5 rounded-[35px]" style={{ lineHeight: '22px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                     Marketing Digital
                   </label>
-                  <label className="border border-white p-2.5 rounded-[35px]" style={{ lineHeight: '22px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
+                  <label className="relative z-10 border border-white p-2.5 rounded-[35px]" style={{ lineHeight: '22px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                     UX/UI Design
                   </label>
-                  <label className="border border-white p-2.5 rounded-[35px] h" style={{ lineHeight: '22px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
+                  <label className="relative z-10 border border-white p-2.5 rounded-[35px] h" style={{ lineHeight: '22px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                     Análise de Dados
                   </label>
                 </aside>
 
 
-                <h1 className="font-semibold md:text-[32px] sx:text-[22px] mf:text-[62px] text-white leading-tight  mx-auto w-full"
+                <h1 className=" relative z-10 font-semibold md:text-[32px] sx:text-[22px] mf:text-[62px] text-white leading-tight  mx-auto w-full"
                   style={{  textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                   Transformamos ideias em marcas impactantes e resultados que impulsionam o sucesso do seu&nbsp;negócio.
                 </h1>
-                <h2 className="text-[#FFFFFF99] w-full mx-auto font-normal md:text-[18px] sx:text-[14px] mf:text-[24px] text-center mt-4"
-                  style={{ lineHeight: '30.24px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
+                <h2 className="relative z-10 text-[#FFFFFF99] w-full mx-auto font-normal md:text-[18px] sx:text-[14px] mf:text-[24px] text-center mt-4"
+                  style={{  textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                   Na Flint IT, acreditamos que cada empresa tem um potencial único.
                   Combinamos inovação em tecnologia e marketing digital para criar
                   soluções sob medida que geram resultados reais.
@@ -94,9 +95,9 @@ export function MainIndex() {
                 </div>
 
 
-                <aside className="cursor-pointer bg-[#5a5b5b] mx-auto text-center py-2 flex justify-center mt-8 w-[23.32px] rounded-[4px]">
+                <Link href="#about"  className="relative z-10  bg-[#5a5b5b] mx-auto text-center py-2 flex justify-center mt-8 w-[23.32px] rounded-[4px]">
                   <Image src="/Vector.svg" alt="Flint quadrados" width={9.98} height={5.87} priority />
-                </aside>
+                </Link>
               </div>
             </div>
           </div>

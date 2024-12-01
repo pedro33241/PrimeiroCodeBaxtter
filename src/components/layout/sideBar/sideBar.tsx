@@ -11,6 +11,8 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Link from "next/link";
 
+
+
 export function AccountMenu() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
@@ -35,7 +37,7 @@ export function AccountMenu() {
                         aria-haspopup="true"
                         aria-expanded={open ? "true" : undefined}
                     >
-                        <Avatar sx={{ background: "#010202", width: 40, height: 40 }}>
+                        <Avatar sx={{ background: "transparent", width: 40, height: 40 }}>
                             <svg
                                 className="w-6 h-6"
                                 fill="none"
@@ -64,8 +66,13 @@ export function AccountMenu() {
                     elevation: 0,
                     sx: {
                         overflow: "visible",
-                        width: "auto",
+                        width: "100%",  
+                        borderTop: '1px solid', 
+                        borderImageSource: 'linear-gradient(90deg, rgba(1, 2, 2, 0.16) 0%, rgba(255, 255, 255, 0.16) 50%, rgba(1, 2, 2, 0.16) 100%)',
+                        borderImageSlice: 1  ,
+                        color:"rgba(255, 255, 255, 0.6)",
                         height: "100%",
+                        backgroundColor: "#0D0D0E",  
                         filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.3))",
                         mt: 2,
                         "& .MuiAvatar-root": {},
@@ -74,10 +81,10 @@ export function AccountMenu() {
                             display: "block",
                             position: "absolute",
                             top: 0,
-                            right:20,
+                            right: 20,
                             width: 10,
                             height: 10,
-                            bgcolor: "background.paper",
+                            bgcolor: "#0D0D0E",
                             transform: "translateY(-50%) rotate(45deg)",
                             zIndex: 0,
                         },
@@ -86,46 +93,66 @@ export function AccountMenu() {
                 transformOrigin={{ horizontal: "right", vertical: "top" }}
                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             >
-                <Link href="/" prefetch={true}>
+                     <Link href="/" prefetch={true}>
                     <MenuItem onClick={handleClose} className="p-5">
-                        <ListItemIcon>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                                viewBox="0 0 16 16"
-                            >
-                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                            </svg>
+                        <ListItemIcon  style={{color:"rgba(255, 255, 255, 0.6)"}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-card-text" viewBox="0 0 16 16">
+  <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+  <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
+</svg>
                         </ListItemIcon>
-                        Home
+                        Serviços
                     </MenuItem>
                 </Link>
 
-                <Link href="/product" prefetch={true}>
+                <Link href="/case" prefetch={true}>
                     <MenuItem onClick={handleClose} className="p-5">
-                        <ListItemIcon>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                                className="bi bi-cart"
-                                viewBox="0 0 16 16"
-                            >
-                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                            </svg>
+                        <ListItemIcon  style={{color:"rgba(255, 255, 255, 0.6)"}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
+  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+</svg>
                         </ListItemIcon>
-                        Produtos
+                        Case
+                    </MenuItem>
+                </Link>
+                <Link href="/about" prefetch={true}>
+                    <MenuItem onClick={handleClose} className="p-5">
+                        <ListItemIcon  style={{color:"rgba(255, 255, 255, 0.6)"}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-people-fill" viewBox="0 0 16 16">
+  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+</svg>
+                        </ListItemIcon>
+                        Sobre nós
                     </MenuItem>
                 </Link>
 
-                <Divider />
+                <Link href="/blog" prefetch={true}>
+                    <MenuItem onClick={handleClose} className="p-5">
+                        <ListItemIcon  style={{color:"rgba(255, 255, 255, 0.6)"}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chat-text-fill" viewBox="0 0 16 16">
+  <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M4.5 5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z"/>
+</svg>
+                        </ListItemIcon>
+                        Blog
+                    </MenuItem>
+                </Link>
 
+                <Link href="/#testimony" prefetch={true}>
+                    <MenuItem onClick={handleClose} className="p-5">
+                        <ListItemIcon  style={{color:"rgba(255, 255, 255, 0.6)"}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chat-square-quote-fill" viewBox="0 0 16 16">
+  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2zm7.194 2.766a1.7 1.7 0 0 0-.227-.272 1.5 1.5 0 0 0-.469-.324l-.008-.004A1.8 1.8 0 0 0 5.734 4C4.776 4 4 4.746 4 5.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.5 2.5 0 0 0-.227-.4zM11 7.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.5 2.5 0 0 0-.228-.4 1.7 1.7 0 0 0-.227-.273 1.5 1.5 0 0 0-.469-.324l-.008-.004A1.8 1.8 0 0 0 10.07 4c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+</svg>
+                        </ListItemIcon>
+                        Depoimentos
+                    </MenuItem>
+                </Link>
+              
+              
+                <Divider  style={{border:"1px solid rgba(255, 255, 255, 0.16)"}}/> 
                 <Link href="#contact" prefetch={true} id="contact">
                     <MenuItem onClick={handleClose} className="p-5">
-                        <ListItemIcon>
+                        <ListItemIcon style={{color:"rgba(255, 255, 255, 0.6)"}}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
