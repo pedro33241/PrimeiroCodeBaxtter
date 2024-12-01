@@ -3,10 +3,12 @@ import { NavBar } from "../../components/layout/navBar/navBar";
 import { FooterApp } from "../../components/footer/footer";
 import Image from "next/image";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
 import "../globals.css";
 import React from 'react';
 
-export function  BlogPage  () {
+const BlogPage = () => {
   return (
     <>
 <NavBar />
@@ -42,7 +44,11 @@ export function  BlogPage  () {
  
   </div>
   <FooterApp/>
+  
+  <Analytics />
+      <SpeedInsights /> 
   </>
   );
 }
- 
+
+export default BlogPage;

@@ -6,6 +6,8 @@ import { FooterApp } from "@/components/footer/footer";
 import { MainIndex } from "@/components/main";
 import { partners, soluctionsData, tabObject } from "../constant/variable";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
 
 import { useState } from "react";
 
@@ -243,6 +245,9 @@ export default function Home() {
 
 
 <FooterApp/>
+
+<Analytics />
+      <SpeedInsights /> 
       </section>
     </>
   );

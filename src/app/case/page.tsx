@@ -3,10 +3,12 @@ import { NavBar } from "../../components/layout/navBar/navBar";
 import { FooterApp } from "../../components/footer/footer";
 import Image from "next/image";
 import "../globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
 
 import React from 'react';
 
-export function  CasePage  ()  {
+const CasePage = () => {
    
   return (
     
@@ -44,6 +46,11 @@ export function  CasePage  ()  {
  
   </div>
 <FooterApp/>
+
+<Analytics />
+      <SpeedInsights /> 
   </>
   );
 }
+
+export default CasePage;

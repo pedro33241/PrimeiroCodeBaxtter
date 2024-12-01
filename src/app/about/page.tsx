@@ -6,8 +6,10 @@ import "../globals.css";
 import Link from "next/link";
 import {aboutCompany,infoCompany} from "../../constant/variable";
 import { useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
 
-export function  AboutPage () {
+const AboutPage = () => {
 
     const [tab, setTab] = useState(1);
 
@@ -153,7 +155,7 @@ priority
         </div>
       </div>
 
-         <div className="w-full rounded-[12px]   h-[478px] relative p-3" style={{ background: 'linear-gradient(113.05deg, #7B2CBF 29.22%, #6A2A9F 74.81%)', border: '1px solid', borderImageSource: 'linear-gradient(107.6deg, rgba(77, 77, 85, 0) 0%, #6A2A9F 100%)' }}>
+         <div className="w-full rounded-[12px] h-[478px] relative p-3" style={{ background: 'linear-gradient(113.05deg, #7B2CBF 29.22%, #6A2A9F 74.81%)', border: '1px solid', borderImageSource: 'linear-gradient(107.6deg, rgba(77, 77, 85, 0) 0%, #6A2A9F 100%)' }}>
          <aside>
        <h2 className="sx:text-[24px] mf:text-[32px] font-semibold">Laurindo Camuenho</h2>
        <span className="font-normal  text-[#DFDFE0] sx:text-[15px] mf:text-[18px]">Back-end Developer</span>
@@ -212,6 +214,11 @@ priority
   </div>
   
 <FooterApp/>
+
+<Analytics />
+      <SpeedInsights /> 
  </>
   );
 }
+
+export default AboutPage;
