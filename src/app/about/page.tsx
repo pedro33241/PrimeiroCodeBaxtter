@@ -4,17 +4,16 @@ import { FooterApp } from "../../components/footer/footer";
 import Image from "next/image";
 import "../globals.css"; 
 import Link from "next/link";
-import {aboutCompany,infoCompany} from "../../constant/variable";
+import { aboutCompany, infoCompany } from "../../constant/variable";
 import { useState } from "react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-
+ 
 const AboutPage = () => {
-
-    const [tab, setTab] = useState(1);
+  const [tab, setTab] = useState(1);
 
   return (
-<>
+    <>
 <NavBar />
 <div className="limit mf:px-24 sx:px-5">
     
