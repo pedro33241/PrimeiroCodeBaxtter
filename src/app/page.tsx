@@ -153,7 +153,7 @@ export default function Home() {
 
 
 
-        <div  id="about" className="flex flex-wrap justify-between relative mx-auto  mb-36 items-center mt-36 pb-3 border border-[#380C69] md:w-[80%] sx:[90%] mf:w-[70%]  rounded-[45px]">
+        <div  id="about" className="flex sx:flex-col mf:flex-row justify-between relative mx-auto  mb-36 items-center mt-36 pb-3 border border-[#380C69] md:w-[80%] sx:[90%] mf:w-[70%]  rounded-[45px]">
           <Image
 
             src="/gradient.png"
@@ -173,7 +173,7 @@ export default function Home() {
             priority
           />
 
-          <div className="flex flex-col gap-2  relative sx:pt-20 md:pt-16 mf:pt-36 sx:px-14 mf:px-8">
+          <div className="flex flex-col gap-2  w-full relative sx:pt-20 md:pt-16 mf:pt-36 sx:px-14 mf:px-8">
             <h4 className="text-white text-base">Tecnologia</h4>
             <h2 className=" mf:w-[783px] md:w-[340px] sx:w-full text-white font-semibold  sx:text-[28px] mf:text-[58px]">Flint IT é a sua escolha perfeita em termos de:</h2>
 
@@ -191,11 +191,11 @@ export default function Home() {
           </div>
 
 
-          <div className=" mt-44">
-            <aside
-              className="border-[#6D1BBC] -mt-5 rotated   md:w-[200px]  text-white border rounded-[15px] py-4 px-6 font-semibold md:text-2xl sx:text-xl "
-              style={{ transform: 'rotate(-60deg)' }}>Performance</aside>
-
+          <div className="bg-red-900 mt-44  h-full w-full">
+          <aside
+              className="border-[#6D1BBC] absolute right-0 bottom-20  rotated   md:w-[200px]  text-white border rounded-[15px] py-4 px-6 font-semibold md:text-2xl sx:text-xl "
+              style={{ transform: 'rotate(-70deg)' }}>Performance</aside>
+  
           </div>
 
         </div>
