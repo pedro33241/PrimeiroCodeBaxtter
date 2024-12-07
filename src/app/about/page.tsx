@@ -36,8 +36,8 @@ const [tab, setTab] = useState(1);
     src="/Container.png"
     alt="Flint quadrados"
     width={968}
-    height={924}
-    className=" sx:mt-36  mf:mt-56 w-[968px] "
+    height={92}
+    className=" sx:mt-36 h-[708px]  mf:mt-56 w-[708px] "
     priority
   />
 
@@ -75,14 +75,14 @@ priority
 </div>
 
 
-<div className="flex mf:mt-72 sx:mt-24 gap-12  flex-wrap justify-between ">
+<div className="flex mf:mt-72 sx:mt-24  gap-12  mf:flex-row sx:flex-col justify-between ">
 
 <aside className="mf:w-[727px] sx:w-full">
     <h3 className="font-semibold md:text-[32px] sx:text-[24px] mf:text-[48px] text-white ">Nossa missão e nossa visão vêm de uma cultura forte e positiva <span className="text-[#7B2CBF]">.</span></h3>
 <span className="sx:text-sx mf:text-lg  text-[#DFDFE0]  font-medium">Em um mercado dinâmico e competitivo, as empresas precisam de soluções inovadoras e confiáveis para impulsionar seu crescimento. A Flint IT se destaca por oferecer</span>
 </aside>
 
-<aside  className="mf:mt-0 sx:mt-36 mf:w-[727px] sx:w-full  flex flex-col ">
+<aside  className="mf:mt-0 sx:mt-16 mf:w-[727px] sx:w-full  flex flex-col ">
     
 <aside className="flex flex-wrap  gap-20 ">
 {aboutCompany?.map(item=>(
@@ -115,7 +115,7 @@ priority
     Conheça nossa incrível equipe<span className="text-[#7B2CBF]">.</span>
   </h3>
 
-  <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 relative">
+  <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 relative text-white">
   <div className="w-full flex flex-col gap-4">
        <div className="w-full h-[490px] rounded-[12px]  p-3 relative" style={{ background: 'linear-gradient(113.05deg, #7B2CBF 29.22%, #6A2A9F 74.81%)', border: '1px solid', borderImageSource: 'linear-gradient(107.6deg, rgba(77, 77, 85, 0) 0%, #6A2A9F 100%)' }}>
  
@@ -124,7 +124,7 @@ priority
        <span className="font-normal  text-[#DFDFE0] sx:text-[15px] mf:text-[18px]">Co - Founder | Project Manager</span>
 </aside>
 
-<Link href="" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
+                <Link href="https://www.linkedin.com/in/mariano-kalei-a85a1a109/" target="_blanck" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
 </svg></Link>
 
@@ -138,7 +138,7 @@ priority
        <span className="font-normal  text-[#DFDFE0] sx:text-[15px] mf:text-[18px]">Front-end Developer</span>
 </aside>
 
-<Link href="https://www.linkedin.com/in/pedro-os%C3%B3rio-2a3544224/" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
+                    <Link href="https://www.linkedin.com/in/pedro-os%C3%B3rio-2a3544224/" target="_blanck" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
 </svg></Link>
      
@@ -149,7 +149,7 @@ priority
        <span className="font-normal  text-[#DFDFE0] sx:text-[15px] mf:text-[18px]">Back-end Developer</span>
 </aside>
 
-<Link href="" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
+                    <Link href="" target="_blanck"   className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
 </svg></Link>
      
@@ -162,7 +162,7 @@ priority
        <span className="font-normal  text-[#DFDFE0] sx:text-[15px] mf:text-[18px]">Back-end Developer</span>
 </aside>
 
-<Link href="" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
+<Link href=""  target="_blanck" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
 </svg></Link>
      
@@ -177,7 +177,7 @@ priority
        <span className="font-normal  text-[#DFDFE0] sx:text-[15px] mf:text-[18px]">UX/UI Designer</span>
 </aside>
 
-<Link href="" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
+                <Link href="" target="_blanck" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
 </svg></Link>
      
@@ -188,7 +188,7 @@ priority
        <span className="font-normal  text-[#DFDFE0] sx:text-[15px] mf:text-[18px]">Front-end Developer</span>
 </aside>
 
-<Link href="" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
+                <Link href="" target="_blanck" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
 </svg></Link>
      
@@ -199,7 +199,7 @@ priority
        <span className="font-normal  text-[#DFDFE0] sx:text-[15px] mf:text-[18px]">CEO da TechOne</span>
 </aside>
 
-<Link href="" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
+                <Link href="" target="_blanck" className="absolute bottom-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
 </svg></Link>
      

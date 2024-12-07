@@ -11,7 +11,7 @@ export function MainIndex() {
   
     return (
       <>
-        <section className="  h-auto ">
+        <section className="h-auto ">
 
           <div className=" mx-auto flex justify-center items-center">
            
@@ -39,7 +39,7 @@ export function MainIndex() {
               }}
             ></div>
 
-            <div className="mx-auto sx:mt-44 mf:mt-80 justify-center   flex items-center text-center top-[20vh] w-full px-4">
+            <div className="mx-auto sx:mt-44 mf:mt-36 justify-center   flex items-center text-center top-[20vh] w-full px-4">
               <div className="max-w-[1408px] w-full mx-auto">
                 <aside className="mb-7 flex flex-wrap text-white md:text-xs sx:text-[11px] mf:text-base font-medium gap-[25px] justify-center">
                   <label className="relative z-10 border border-white p-2.5 rounded-[35px]" style={{ lineHeight: '22px', textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
@@ -57,7 +57,7 @@ export function MainIndex() {
                 </aside>
 
 
-                <h1 className=" relative z-10 font-semibold md:text-[32px] sx:text-[22px] mf:text-[62px] text-white leading-tight  mx-auto w-full"
+                <h1 className=" relative z-10 font-semibold md:text-[32px] sx:text-[22px] mf:text-[59px] text-white leading-tight  mx-auto w-full"
                   style={{  textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                   Transformamos ideias em marcas impactantes e resultados que impulsionam o sucesso do seu&nbsp;negócio.
                 </h1>
@@ -69,7 +69,7 @@ export function MainIndex() {
                 </h2>
 
 
-                <div className="partner-scroll-container sx:mt-12 mf:mt-32">
+                <div className="partner-scroll-container sx:mt-12 mf:mt-16">
                   <div className="partner-scroll-content">
                     {partnerData?.map((item) => (
                       <Image

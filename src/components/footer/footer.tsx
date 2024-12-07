@@ -32,7 +32,7 @@ export function FooterApp(){
     return(
         <>
   <section 
-  className="py-28 px-16 mt-44 bg-[#0D0D0E]"
+  className="py-28 px-16 mt-44 bg-[#0D0D0E] text-white"
   style={{
     borderTop: '1px solid', 
     borderImageSource: 'linear-gradient(90deg, rgba(1, 2, 2, 0.16) 0%, rgba(255, 255, 255, 0.16) 50%, rgba(1, 2, 2, 0.16) 100%)',

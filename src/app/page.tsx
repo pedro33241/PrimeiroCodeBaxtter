@@ -9,13 +9,11 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react";
 
-import { useState } from "react";
-
+import { useState } from "react"; 
 
 export default function Home() {
 
-
-  const [tab, setTab] = useState(1);
+const [tab, setTab] = useState(1);
 
   return (
     <>
@@ -34,7 +32,7 @@ export default function Home() {
             </h4>
           </aside>
 
-          <div className="flex flex-wrap sx:justify-center mf:justify-around gap-14 mt-16">
+          <div className="flex sx:flex-col md:flex-row sx:justify-center mf:justify-around gap-14 mt-16">
 
             {soluctionsData?.map(item => (
               <aside
@@ -153,7 +151,7 @@ export default function Home() {
 
 
 
-        <div  id="about" className="flex sx:flex-col mf:flex-row justify-between relative mx-auto  mb-36 items-center mt-36 pb-3 border border-[#380C69] md:w-[80%] sx:[90%] mf:w-[70%]  rounded-[45px]">
+        <div  id="about" className="mf:py-[136px] sx:mx-10 sx:px-[43px] mf:px-[43px] sx:py-[100px] flex sx:flex-col mf:flex-row justify-center  text-center relative md:mx-auto  mb-36 items-center mt-36  border border-[#380C69] md:w-[80%] sx:[90%] mf:w-[70%]  rounded-[45px]">
           <Image
 
             src="/gradient.png"
@@ -173,9 +171,9 @@ export default function Home() {
             priority
           />
 
-          <div className="flex flex-col gap-2  w-full relative sx:pt-20 md:pt-16 mf:pt-36 sx:px-14 mf:px-8">
+          <div className="flex flex-col gap-2 text-left  sx:w-full mf:w-[793px] relative   ">
             <h4 className="text-white text-base">Tecnologia</h4>
-            <h2 className=" mf:w-[783px] md:w-[340px] sx:w-full text-white font-semibold  sx:text-[28px] mf:text-[58px]">Flint IT é a sua escolha perfeita em termos de:</h2>
+            <h2 className=" mf:w-[783px] md:w-[340px] sx:w-full text-white font-semibold  sx:text-[24px] mf:text-[58px]">Flint IT é a sua escolha perfeita em termos de:</h2>
 
             <ul className="flex flex-col gap-4 sx:text-xs mf:text-lg font-semibold">
               <li className="flex gap-3"> <Image src="/save.svg" alt="Flint" width={24} height={24} priority /> Soluções Personalizadas para Cada Negócio. </li>
@@ -185,19 +183,20 @@ export default function Home() {
               <li className="flex gap-3"> <Image src="/save.svg" alt="Flint" width={24} height={24} priority /> Equipe Multidisciplinar e Apaixonada. </li>
             </ul>
 
-            <button className="flex mt-3   items-center justify-center  sx:w-full md:w-[299px] bg-white flex-row gap-3 text-[#3C096C] rounded-lg py-4 px-6 font-semibold md:text-lg sx:text-xs "> Descubra&nbsp;mais&nbsp;sobre&nbsp;nós <Image src="/send.svg" alt="Flint" width={24} height={24} priority /></button>
+            <button className="flex mt-3   items-center justify-center  sx:w-full md:w-[299px] bg-white flex-row gap-2 text-[#3C096C] rounded-lg py-4 px-6 font-semibold md:text-lg sx:text-[10px] "> Descubra mais sobre nós <Image src="/send.svg" alt="Flint" width={24} height={24} priority /></button>
 
 
           </div>
 
 
-          <div className="bg-red-900 mt-44  h-full w-full">
+          <div className=" mt-44  h-full w-full">
           <aside
               className="border-[#6D1BBC] absolute right-0 bottom-20  rotated   md:w-[200px]  text-white border rounded-[15px] py-4 px-6 font-semibold md:text-2xl sx:text-xl "
               style={{ transform: 'rotate(-70deg)' }}>Performance</aside>
   
           </div>
 
+          
         </div>
 
         <div id="testimony" className="mf:mx-16 sx:mx-5  mt-16 items-center justify-center flex flex-col text-center mx-auto">
@@ -242,8 +241,7 @@ export default function Home() {
     ))}
   </div>
 </div>
-
-
+ 
 <FooterApp/>
 
 <Analytics />

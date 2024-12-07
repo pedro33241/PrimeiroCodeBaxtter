@@ -23,6 +23,7 @@
     position: relative;
   }
   
+
   .partner-scroll-container::before {
     content: '';
     position: absolute;
@@ -51,4 +52,6 @@
       transform: translateX(-50%);
     }
   }
+  
+
   

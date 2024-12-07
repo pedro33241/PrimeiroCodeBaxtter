@@ -24,7 +24,7 @@ export function NavBar() {
 
                 <Link href="/" className="mt-[24px]">
                     <Image
-                        src="/icon.svg"
+                        src="/icon.png"
                         alt="Flint logo"
                         width={142.44}
                         height={41}
