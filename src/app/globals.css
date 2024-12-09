@@ -73,3 +73,31 @@ object-fit: cover;
 background-size: cover;
 border-radius: 12px;
  }
+.title {  
+  text-align: center;  
+  font-size: 3em;  
+  color: #8e44ad;  
+}  
+
+.matter-box {  
+  position: relative; /* Permite que os filhos sejam posicionados */  
+  width: 100vw;  
+  height: 100vh;  
+  background-color: #f0f0f0; /* Cor de fundo */  
+  overflow: hidden;  
+}  
+
+.skill {  
+  position: absolute; /* Permite o posicionamento absoluto */  
+  width: 80px;  
+  height: 40px;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  background-color: #8e44ad; /* Cor de fundo das habilidades */  
+  color: white;  
+  border-radius: 8px;  
+  cursor: grab;  
+  text-align: center;  
+  font-size: 1em;  
+}
