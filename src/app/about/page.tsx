@@ -7,12 +7,66 @@ import Link from "next/link";
 import { aboutCompany, infoCompany } from "../../constant/variable";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
- 
-import { useState } from "react";
 
+import { motion, useInView } from "framer-motion";
+import { useState, useRef } from "react"; 
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 900,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 700,
+    responsive: [
+      {
+        breakpoint: 2004,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 6,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 8,
+          initialSlide: 1,
+          dots: true,
+        },
+      },
+    ],
+  };
 
 export default function About() {
 const [tab, setTab] = useState(1);
+
+
+
+  const variant = {
+    initial: { opacity: 0, y: 50 }, 
+    animate: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 50, damping: 25, duration: 1.5 } }, // Move devagar para cima
+  };
+
+  const ref0 = useRef(null);
+  const isInView0 = useInView(ref0, { once: true });
+
+
+  const ref1 = useRef(null);
+  const isInView1 = useInView(ref1, { once: true });
+
+  const ref2 = useRef(null);
+  const isInView2 = useInView(ref2, { once: true });
+
+  const ref3 = useRef(null);
+  const isInView3 = useInView(ref3, { once: true });
+
+  const ref4 = useRef(null);
+  const isInView4 = useInView(ref4, { once: true });
+
 
   return (
     <>
@@ -48,6 +102,13 @@ const [tab, setTab] = useState(1);
 
 <div className="relative">
 
+          <motion.div
+            ref={ref0}
+            initial="initial"
+            animate={isInView0 ? "animate" : "initial"}
+            transition={{ duration: 1.5, delay: 0 }}
+            variants={variant}
+          >
 <Image
     src="/about.png"
     alt="Flint quadrados"
@@ -56,7 +117,7 @@ const [tab, setTab] = useState(1);
     className="w-full "
     priority
   />
-
+</motion.div>
 <Image
 
 src="/selo.svg"
@@ -65,25 +126,42 @@ width={80.42}
 height={91.07}
 className="absolute right-16 top-12"
 priority
-/>
+          />
+
+          <motion.div
+            ref={ref1}
+            initial="initial"
+            animate={isInView1 ? "animate" : "initial"}
+            transition={{ duration: 1.5, delay: 0 }}
+            variants={variant}
+          >
 
 <br/><br/>
 <h4 className="sx:text-[18px] font-[600] mf:text-[24px] text-white">Quem somos?</h4>
 <label className="sx:text-[18px] mf:text-[38px]  font-[600] text-[#dfdfe0]">A Flint IT é uma empresa de tecnologia inovadora e marketing digital, dedicada a auxiliar empresas no desenvolvimento de marcas impactantes, na otimização de seus processos de gestão e na conquista de resultados excepcionais.</label>
 <br/><br/>
 <label className="sx:text-[18px] mf:text-[38px]  font-[600] text-[#dfdfe0]">Somos uma equipe diversificada e talentoso de profissionais apaixonados por tecnologia e marketing. Combinamos nossa expertise em diferentes áreas para oferecer soluções completas e personalizadas para cada cliente. </label>
-</div>
 
+        
+        </motion.div></div>
 
+        <motion.div
+          ref={ref2}
+          initial="initial"
+          animate={isInView2 ? "animate" : "initial"}
+          transition={{ duration: 1.5, delay: 0 }}
+          variants={variant}
+        >
 <div className="flex mf:mt-72 sx:mt-24  gap-12  mf:flex-row sx:flex-col justify-between ">
 
 <aside className="mf:w-[727px] sx:w-full">
     <h3 className="font-semibold md:text-[32px] sx:text-[24px] mf:text-[48px] text-white ">Nossa missão e nossa visão vêm de uma cultura forte e positiva <span className="text-[#7B2CBF]">.</span></h3>
 <span className="sx:text-sx mf:text-lg  text-[#DFDFE0]  font-medium">Em um mercado dinâmico e competitivo, as empresas precisam de soluções inovadoras e confiáveis para impulsionar seu crescimento. A Flint IT se destaca por oferecer</span>
 </aside>
-
+        
 <aside  className="mf:mt-0 sx:mt-16 mf:w-[727px] sx:w-full  flex flex-col ">
-    
+
+           
 <aside className="flex flex-wrap  gap-20 ">
 {aboutCompany?.map(item=>(
 <button key={item?.id} className={`hover:bg-gray-900 rounded-[20px] duration-100 transition-all p-4 sx:text-[16px] mf:text-[24px] font-semibold ${tab == item?.id ? 'text-[#7B2CBF]' : 'text-white'}`} onClick={()=>{setTab(item?.id)}}>{item?.name}</button>
@@ -106,16 +184,30 @@ priority
           )
         ))}
       </aside>
-
 </aside>
 </div>
+</motion.div>
 
 <div className="sx:mt-36 mf:mt-72">
-  <h3 className="font-semibold sx:w-full mf:w-[565px] md:text-[32px] sx:text-[24px] mf:text-[48px] text-white">
+
+          <motion.div
+            ref={ref3}
+            initial="initial"
+            animate={isInView3 ? "animate" : "initial"}
+            transition={{ duration: 1.5, delay: 0 }}
+            variants={variant}
+          >  <h3 className="font-semibold sx:w-full mf:w-[565px] md:text-[32px] sx:text-[24px] mf:text-[48px] text-white">
     Conheça nossa incrível equipe<span className="text-[#7B2CBF]">.</span>
   </h3>
 
-  <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 relative text-white">
+        </motion.div>
+          <motion.div
+            ref={ref3}
+            initial="initial"
+            animate={isInView3 ? "animate" : "initial"}
+            transition={{ duration: 1.5, delay: 0 }}
+            variants={variant}
+          >  <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 relative text-white">
   <div className="w-full flex flex-col gap-4">
        <div className="w-full h-[490px] rounded-[12px]  p-3 relative" style={{ background: 'linear-gradient(113.05deg, #7B2CBF 29.22%, #6A2A9F 74.81%)', border: '1px solid', borderImageSource: 'linear-gradient(107.6deg, rgba(77, 77, 85, 0) 0%, #6A2A9F 100%)' }}>
  
@@ -169,7 +261,8 @@ priority
       </div>
 
     </div>
-</div>
+              </div>
+              
    <div className="flex w-full flex-col gap-5">
         <div className="w-full rounded-[12px] relative p-3 h-[232px]" style={{ background: 'linear-gradient(113.05deg, #7B2CBF 29.22%, #6A2A9F 74.81%)', border: '1px solid', borderImageSource: 'linear-gradient(107.6deg, rgba(77, 77, 85, 0) 0%, #6A2A9F 100%)' }}>
         <aside>
@@ -208,7 +301,7 @@ priority
     </div>
   </div> 
 
-
+          </motion.div>
 
 </div>
 

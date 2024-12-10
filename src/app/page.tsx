@@ -10,11 +10,1695 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react";
 
-import { useState } from "react"; 
+import { motion, useInView } from "framer-motion";
+import { useState ,useRef} from "react"; 
 
-export default function Home() {
+type Partner = {
+  id: number;
+  icone: string;
+  description: string;
+  partners: string;
+  partnersLogo: string;
+  partnersDescrible: string;
+}
 
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 400,
+  slidesToShow: 9,
+  slidesToScroll: 4,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        dots: true,
+      },
+    },
+  ],
+};
+const  Home = ( )=> {
+ 
 const [tab, setTab] = useState(1);
+const containerRef = useRef<HTMLDivElement | null>(null);  
+const [isDragging, setIsDragging] = useState<boolean>(false);  
+const [startX, setStartX] = useState<number>(0);  
+const [scrollLeft, setScrollLeft] = useState<number>(0);  
+ 
+const onMouseDown = (e: React.MouseEvent) => {
+  if (containerRef.current) {
+    setIsDragging(true);
+    setStartX(e.clientX);
+    setScrollLeft(containerRef.current.scrollLeft);  
+  }
+};
+ 
+const onMouseMove = (e: React.MouseEvent) => {
+  if (!isDragging || !containerRef.current) return;
+  const moveX = e.clientX - startX; 
+  containerRef.current.scrollLeft = scrollLeft - moveX;  
+};
+ 
+const onMouseUp = () => {
+  setIsDragging(false);
+}; 
+const onTouchStart = (e: React.TouchEvent) => {
+  if (containerRef.current) {
+    setIsDragging(true);
+    setStartX(e.touches[0].clientX);
+    setScrollLeft(containerRef.current.scrollLeft);
+  }
+};
+
+const onTouchMove = (e: React.TouchEvent) => {
+  if (!isDragging || !containerRef.current) return;
+  const moveX = e.touches[0].clientX - startX;
+  containerRef.current.scrollLeft = scrollLeft - moveX;
+};
+
+const onTouchEnd = () => {
+  setIsDragging(false);
+  };
+  
+
+
+  const variant = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 50, damping: 25, duration: 1.5 } }, // Move devagar para cima
+  };
+
+  3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  const ref0 = useRef(null);
+  const isInView0 = useInView(ref0, { once: true });
+
+
+  const ref1 = useRef(null);
+  const isInView1 = useInView(ref1, { once: true });
+
+  const ref2 = useRef(null);
+  const isInView2 = useInView(ref2, { once: true });
+
+  const ref3 = useRef(null);
+  const isInView3 = useInView(ref3, { once: true });
+
 
   return (
     <>
@@ -24,7 +1708,8 @@ const [tab, setTab] = useState(1);
 
         <MainIndex />
 
-        <div className="w-full mf:px-16 sx:px-5 relative mt-36 sx:mb-36 mf:mb-80">
+     
+          <div className="w-full mf:px-16 sx:px-5 relative mt-36 sx:mb-36 mf:mb-80">
 
           <aside className="sx:w-full mf:w-[1017px] ">
             <h1 className="font-semibold md:text-[32px] sx:text-[24px] mf:text-[48px] text-white" style={{  textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>Nossos Soluções Estratégicas</h1>
@@ -66,7 +1751,6 @@ const [tab, setTab] = useState(1);
           </div>
         </div>
 
-
         <article className="relative  ">
 
           <div className="mx-auto flex justify-center items-center text-center   ">
@@ -80,13 +1764,19 @@ const [tab, setTab] = useState(1);
               priority
             />
 
-            <aside className="z-50 ">
+            <motion.div
+              ref={ref0}
+              initial="initial"
+              animate={isInView0 ? "animate" : "initial"}
+              transition={{ duration: 0.2, delay: 0 }}
+              variants={variant}
+            > 
+         <aside className="z-50 ">
               <h3 className="font-semibold md:text-[32px] sx:text-[24px] mf:text-[48px] text-white"
                 style={{ textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                 Nossos Serviços
               </h3>
-
-              <h4 className="mt-8 text-center items-center mx-auto font-medium mf:text-[18px] md:text-[18px] sx:text-[14px] text-[#FFFFFF99] mf:w-[1017px] sx:w-full"
+               <h4 className="mt-8 text-center items-center mx-auto font-medium mf:text-[18px] md:text-[18px] sx:text-[14px] text-[#FFFFFF99] mf:w-[1017px] sx:w-full"
                 style={{ textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                 Ajudamos muitas startups e empresas a projetar produtos digitais, sites, plataformas e aplicativos móveis de alta qualidade que atendem às metas de negócios e atendem às necessidades dos usuários.
               </h4>
@@ -116,9 +1806,16 @@ const [tab, setTab] = useState(1);
 
 
             </aside>
+            </motion.div>
 
           </div>
-
+          <motion.div
+            ref={ref1}
+            initial="initial"
+            animate={isInView1 ? "animate" : "initial"}
+            transition={{ duration: 0.1, delay: 0.1 }}
+            variants={variant}
+          > 
           {tab == 1 && (
             <div className="backgroundImage relative mt-12 mf:mx-16 sx:mx-5 " >
      
@@ -148,11 +1845,27 @@ const [tab, setTab] = useState(1);
               </div>
             </div>
           )}
+
+        </motion.div>
         </article>
 
 
-<BallPool/>
-
+        <motion.div
+          ref={ref3}
+          initial="initial"
+          animate={isInView3 ? "animate" : "initial"}
+          transition={{ duration: 0.1, delay: 0.1 }}
+          variants={variant}
+        >
+          <BallPool />
+          </motion.div>
+      <motion.div
+        ref={ref2}
+        initial="initial"
+        animate={isInView2 ? "animate" : "initial"}
+        transition={{ duration: 0.1, delay: 0.1 }}
+        variants={variant}
+      >
         <div id="testimony" className="mf:mx-16 sx:mx-5  mt-16 items-center justify-center flex flex-col text-center mx-auto">
   <h2
     className="sx:w-full mf:w-[1153px] font-semibold md:text-[32px] sx:text-[24px] mf:text-[48px] text-white"
@@ -160,41 +1873,57 @@ const [tab, setTab] = useState(1);
   >
     Nossos Parceiros encontram inúmeras razões por terem entrado em contato conosco.
   </h2>
-
-  <div className="p-2 w-full relative mt-16 flex flex-row gap-4 justify-between overflow">
-    {partners?.map(item => (
-      <aside
-        className="text-left flex flex-col gap-4 shrink-0 mf:w-[432px] sx:w-[280px]"  
-        key={item?.id} 
-      >
-        <Image
-          src={`${item?.icone}`}
-          alt="Flint"
-          width={45}
-          height={45}
-          priority
-        />
-        <label className="text-white mf:text-[16px] sx:text-[12px]">{item?.description}</label>
-
-        <aside className="flex flex-row gap-2 items-center flex-nowrap"> 
+  <div
+      ref={containerRef}
+      className="p-2 w-full relative mt-16 flex flex-row gap-4 justify-between overflow-hidden cursor-grab"
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={onMouseUp}
+      onMouseLeave={onMouseUp}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      style={{ userSelect: "none" }} 
+    >
+            {partners?.map((item: Partner) => (
+        <aside
+          className="text-left flex flex-col gap-4 shrink-0 mf:w-[432px] sx:w-[280px]"
+          key={item?.id}
+        >
           <Image
-            src={`${item?.partnersLogo}`}
+            src={`${item?.icone}`}
             alt="Flint"
-            width={60}
-            height={60}
+            width={45}
+            height={45}
             priority
           />
-          <div className="flex flex-col gap-1">
-            <h3 className="text-white mf:text-[16px] sx:text-[12px] font-medium">{item?.partners}</h3>
-            <span className="font-normal mf:text-[14px] sx:text-[12px] text-[#FFFFFF99]">
-              {item?.partnersDescrible}
-            </span>
-          </div>
+          <label className="text-white mf:text-[16px] sx:text-[12px]">
+            {item?.description}
+          </label>
+
+          <aside className="flex flex-row gap-2 items-center flex-nowrap">
+            <Image
+              src={`${item?.partnersLogo}`}
+              alt="Flint"
+              width={60}
+              height={60}
+              priority
+            />
+            <div className="flex flex-col gap-1">
+              <h3 className="text-white mf:text-[16px] sx:text-[12px] font-medium">
+                {item?.partners}
+              </h3>
+              <span className="font-normal mf:text-[14px] sx:text-[12px] text-[#FFFFFF99]">
+                {item?.partnersDescrible}
+              </span>
+            </div>
+          </aside>
         </aside>
-      </aside>
-    ))}
-  </div>
+      ))}
+    </div>
 </div>
+
+        </motion.div>
  
 <FooterApp/>
 
@@ -204,3 +1933,5 @@ const [tab, setTab] = useState(1);
     </>
   );
 }
+
+export default Home;

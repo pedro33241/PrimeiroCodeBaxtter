@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "../globals.css";
 import React from 'react';
 
+
 const BlogPage = () => {
   return (
     <>

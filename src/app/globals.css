@@ -101,3 +101,13 @@ border-radius: 12px;
   text-align: center;  
   font-size: 1em;  
 }
+
+/* Hiding scrollbars on webkit browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
