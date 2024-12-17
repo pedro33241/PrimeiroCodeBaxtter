@@ -10,36 +10,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 import { motion, useInView } from "framer-motion";
 import { useState, useRef } from "react"; 
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 900,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    autoplay: true,
-    autoplaySpeed: 700,
-    responsive: [
-      {
-        breakpoint: 2004,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 6,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 700,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 8,
-          initialSlide: 1,
-          dots: true,
-        },
-      },
-    ],
-  };
+ 
 
 export default function About() {
 const [tab, setTab] = useState(1);
@@ -48,7 +19,7 @@ const [tab, setTab] = useState(1);
 
   const variant = {
     initial: { opacity: 0, y: 50 }, 
-    animate: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 50, damping: 25, duration: 1.5 } }, // Move devagar para cima
+    animate: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 50, damping: 25, duration: 1.5 } }, 
   };
 
   const ref0 = useRef(null);
@@ -64,9 +35,7 @@ const [tab, setTab] = useState(1);
   const ref3 = useRef(null);
   const isInView3 = useInView(ref3, { once: true });
 
-  const ref4 = useRef(null);
-  const isInView4 = useInView(ref4, { once: true });
-
+  
 
   return (
     <>
