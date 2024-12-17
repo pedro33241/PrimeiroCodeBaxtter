@@ -131,7 +131,7 @@ priority
 <aside  className="mf:mt-0 sx:mt-16 mf:w-[727px] sx:w-full  flex flex-col ">
 
            
-<aside className="flex flex-wrap  gap-20 ">
+<aside className="flex flex-wrap    ">
 {aboutCompany?.map(item=>(
 <button key={item?.id} className={`hover:bg-gray-900 rounded-[20px] duration-100 transition-all p-4 sx:text-[16px] mf:text-[24px] font-semibold ${tab == item?.id ? 'text-[#7B2CBF]' : 'text-white'}`} onClick={()=>{setTab(item?.id)}}>{item?.name}</button>
     ))}

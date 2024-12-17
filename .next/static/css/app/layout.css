@@ -1884,6 +1884,10 @@ border-radius: 12px;
     justify-content: space-around;
   }
 
+  .mf\:gap-20 {
+    gap: 5rem;
+  }
+
   .mf\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
