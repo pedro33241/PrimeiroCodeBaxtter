@@ -60,7 +60,7 @@ const [tab, setTab] = useState(1);
     alt="Flint quadrados"
     width={968}
     height={92}
-    className=" sx:mt-36 h-[708px]  mf:mt-56 w-[708px] "
+    className=" sx:mt-36    mf:mt-56 w-[708px] "
     priority
   />
 

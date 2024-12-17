@@ -1694,6 +1694,10 @@ border-radius: 12px;
     display: block;
   }
 
+  .md\:h-full {
+    height: 100%;
+  }
+
   .md\:w-\[243px\] {
     width: 243px;
   }
