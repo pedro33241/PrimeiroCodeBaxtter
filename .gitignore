@@ -1,2 +1,4 @@
 /node_modules/
-git status
+/*.log
+/.env
+.DS_Store
