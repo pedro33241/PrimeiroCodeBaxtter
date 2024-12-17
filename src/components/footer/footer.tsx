@@ -80,7 +80,7 @@ export function FooterApp(){
 
      <div className="mf:mt-0 sx:mt-12 flex flex-wrap gap-16">
 
-     <div className=" flex flex-col gap-3" key={services.id}>
+              <div className=" flex flex-col gap-3">
 <h3 className="font-[600] text-white sx:text-[14px] mf:text-[16px] ">{services.services}</h3>
 {services?.links?.map(item=>(
     <Link  href={`${item?.url}`} key={item?.id} className="text-white sx:text-[14px] mf:text-[16px] font-normal ">{item?.name}</Link>
@@ -88,7 +88,7 @@ export function FooterApp(){
 </div>
 
 
-<div className=" flex flex-col gap-3" key={socialMedia.id}>
+<div className=" flex flex-col gap-3" >
 <h3 className="font-[600] text-white sx:text-[14px] mf:text-[16px] ">{socialMedia.services}</h3>
 {socialMedia?.links?.map(item=>(
     <Link href=""  key={item?.id}  className="text-white sx:text-[14px] mf:text-[16px] font-normal ">{item?.name}</Link>
@@ -97,7 +97,7 @@ export function FooterApp(){
 
 
 
-<div className=" flex flex-col gap-3" key={emailServices.id}>
+<div className=" flex flex-col gap-3" >
 <h3 className="font-[600] text-white sx:text-[14px] mf:text-[16px] ">{emailServices.services}</h3>
 {emailServices?.links?.map(item=>(
     <Link href={`${item?.url}`} key={item?.id} className="text-white sx:text-[14px] mf:text-[16px] font-normal ">{item?.name}</Link>
@@ -106,7 +106,7 @@ export function FooterApp(){
 
 
 
-<div  id="contact" className=" flex flex-col gap-3" key={contacts.id}>
+<div  id="contact" className=" flex flex-col gap-3">
 <h3 className="font-[600] text-white sx:text-[14px] mf:text-[16px] ">{contacts.services}</h3>
 {contacts?.links?.map(item=>(
     <Link href={`${item?.url}`} key={item?.id} className="text-white sx:text-[14px] mf:text-[16px] font-normal ">{item?.name}</Link>

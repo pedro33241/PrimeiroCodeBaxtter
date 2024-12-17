@@ -70,7 +70,7 @@ const onTouchEnd = () => {
 
   const variant = {
     initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 50, damping: 25, duration: 1.5 } }, // Move devagar para cima
+    animate: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 50, damping: 25, duration: 1.5 } }
   };
   
  
@@ -106,7 +106,7 @@ const onTouchEnd = () => {
             </h4>
           </aside>
 
-          <div className="flex sx:flex-col md:flex-row sx:justify-center mf:justify-around gap-14 mt-16">
+          <div className="relative z-50 flex sx:flex-col md:flex-row sx:justify-center mf:justify-around gap-14 mt-16">
 
             {soluctionsData?.map(item => (
               <aside
@@ -159,7 +159,7 @@ const onTouchEnd = () => {
               transition={{ duration: 0.2, delay: 0 }}
               variants={variant}
             > 
-         <aside className="z-50 ">
+         <aside className="z-50 relative">
               <h3 className="font-semibold md:text-[32px] sx:text-[24px] mf:text-[48px] text-white"
                 style={{ textUnderlinePosition: 'from-font', textDecorationSkip: 'none' }}>
                 Nossos Serviços
