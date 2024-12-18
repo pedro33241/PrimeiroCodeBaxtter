@@ -32,7 +32,7 @@ export function FooterApp(){
     return(
         <>
   <section 
-  className="py-28 px-16 mt-44 bg-[#0D0D0E] text-white"
+  className="py-28 px-16 mt-44 bg-[#0D0D0E] text-white relative "
   style={{
     borderTop: '1px solid', 
     borderImageSource: 'linear-gradient(90deg, rgba(1, 2, 2, 0.16) 0%, rgba(255, 255, 255, 0.16) 50%, rgba(1, 2, 2, 0.16) 100%)',
@@ -40,7 +40,7 @@ export function FooterApp(){
   }}
 >
  
- <div className="flex mf:flex-row sx:flex-col gap-8 justify-between">
+ <div className="flex md:flex-row sx:flex-col gap-8 justify-between">
  <div className="flex flex-col">
        
        <Image
@@ -78,7 +78,7 @@ export function FooterApp(){
 
 
 
-     <div className="mf:mt-0 sx:mt-12 flex flex-wrap gap-16">
+     <div className="mf:mt-0 sx:mt-12 flex sx:flex-col md:flex-row gap-16">
 
               <div className=" flex flex-col gap-3">
 <h3 className="font-[600] text-white sx:text-[14px] mf:text-[16px] ">{services.services}</h3>
@@ -114,17 +114,16 @@ export function FooterApp(){
 </div>
 
 
-{isVisible && (
-      <button
+     <button
         onClick={scrollToTop}
-       className="w-[34px] h-[64px] fixed sx:right-7  z-50 mf:right-20 bottom-14 bg-black text-[#8E48EC] border border-[#313135] rounded-[30px]"
+       className="w-[34px] h-[64px] absolute bottom-24 right-24    z-50  bg-black text-[#8E48EC] border border-[#313135] rounded-[30px]"
         aria-label="Voltar ao topo"
       >
        <span className="text-[14px] -mt-3 flex justify-center "> <svg xmlns="http://www.w3.org/2000/svg" width="23" height="46" fill="currentColor" className="bi bi-arrow-up" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
 </svg></span>
       </button>
-    )}
+ 
         </div>
       </div>
 

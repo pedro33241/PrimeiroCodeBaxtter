@@ -56,7 +56,7 @@ html::-webkit-scrollbar-thumb:hover {
 @media(min-width:2500px){
   .limit{ 
     margin:auto;
-    width:1800px;
+    width:1500px;
   }
 }
 
